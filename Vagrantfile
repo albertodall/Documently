@@ -3,7 +3,7 @@
 
 Vagrant::Config.run do |config|
 
-  config.vm.box = "ubuntu-11-10_64"
+  config.vm.box = "ubuntu-1110-server-amd64"
   config.vm.box_url = "http://timhuegdon.com/vagrant-boxes/ubuntu-11.10.box"
 
   config.vm.provision :puppet do |puppet|
