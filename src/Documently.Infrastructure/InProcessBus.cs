@@ -15,6 +15,8 @@ namespace Documently.Infrastructure
 {
 	public class InProcessBus : IBus, IDispatchCommits, IServiceBus
 	{
+		public TimeSpan ShutdownTimeout { get; set; }
+
 		private readonly IWindsorContainer _Container;
 
 		private readonly Dictionary<Type, List<Action<DomainEvent>>> _Routes =
@@ -26,6 +28,46 @@ namespace Documently.Infrastructure
 		}
 
 		void IServiceBus.Publish<T>(T message, Action<IPublishContext<T>> contextCallback)
+		{
+			throw new NotImplementedException(); // Ignore?
+		}
+
+		public void Publish<T>(object values) where T : class
+		{
+			throw new NotImplementedException(); // Ignore?
+		}
+
+		public void Publish(object message)
+		{
+			throw new NotImplementedException(); // Ignore?
+		}
+
+		public void Publish<T>(T message) where T : class
+		{
+			throw new NotImplementedException(); // Ignore?
+		}
+
+		public void Publish<T>(object values, Action<IPublishContext<T>> contextCallback) where T : class
+		{
+			throw new NotImplementedException(); // Ignore?
+		}
+
+		public void Publish(object message, Action<IPublishContext> contextCallback)
+		{
+			throw new NotImplementedException(); // Ignore?
+		}
+
+		public void Publish(object message, Type messageType)
+		{
+			throw new NotImplementedException(); // Ignore?
+		}
+
+		public void Publish<T>(T message, Action<IPublishContext<T>> contextCallback) where T : class
+		{
+			throw new NotImplementedException(); // Ignore?
+		}
+
+		public void Publish(object message, Type messageType, Action<IPublishContext> contextCallback)
 		{
 			throw new NotImplementedException(); // Ignore?
 		}
@@ -114,6 +156,16 @@ namespace Documently.Infrastructure
 		public void Inspect(DiagnosticsProbe probe)
 		{
 			probe.Add("mt.bus", "in-memory");
+		}
+
+		public bool TryGetService(Type type, out IBusService result)
+		{
+			throw new NotSupportedException();
+		}
+
+		public IBusService GetService(Type type)
+		{
+			throw new NotSupportedException();
 		}
 	}
 }
