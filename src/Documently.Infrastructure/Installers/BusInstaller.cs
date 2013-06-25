@@ -40,7 +40,7 @@ namespace Documently.Infrastructure.Installers
 					.UsingFactoryMethod(() => ServiceBusFactory.New(sbc =>
 					{
 						sbc.ReceiveFrom(_EndpointUri);
-						sbc.UseRabbitMqRouting();
+						sbc.UseRabbitMq();
 						sbc.UseNLog();
 						sbc.Subscribe(c => c.LoadFrom(container));
 					})).LifeStyle.Singleton,
