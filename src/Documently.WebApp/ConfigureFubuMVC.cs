@@ -1,6 +1,7 @@
 using Documently.WebApp.Handlers;
 using FubuMVC.Core;
 using FubuMVC.Spark;
+using FubuMVC.Diagnostics;
 
 namespace Documently.WebApp
 {
@@ -9,9 +10,7 @@ namespace Documently.WebApp
         public ConfigureFubuMVC()
         {
             // This line turns on the basic diagnostics and request tracing
-            IncludeDiagnostics(true);
-
-            ApplyHandlerConventions<HandlersMarker>();
+            Services<DiagnosticServiceRegistry>();
 
             // Policies
             //Routes.HomeIs<Documently.WebApp.Handlers.Home.GetHandler>(x => x.Execute());
@@ -22,11 +21,7 @@ namespace Documently.WebApp
                 .RootAtAssemblyNamespace()
 				.HomeIs<Handlers.Home.GetHandler>(x => x.Execute());
 
-            this.UseSpark();
-
-            // Match views to action methods by matching
-            // on model type, view name, and namespace
-            Views.TryToAttachWithDefaultConventions();
+            Import<SparkEngine>();
         }
     }
 }
