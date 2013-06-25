@@ -63,7 +63,7 @@ namespace MassTransit.AutomatonymousTests
 
 		public static TSaga ShouldContainSagaInState<TSaga>(this ISagaRepository<TSaga> repository, Guid sagaId,
 															State state, TimeSpan timeout)
-			where TSaga : class, SagaStateMachineInstance
+			where TSaga : Instance
 		{
 			DateTime giveUpAt = DateTime.Now + timeout;
 
