@@ -111,7 +111,7 @@ namespace Documently.App
 
 		private void RegisterNewCustomer(Guid aggregateId)
 		{
-			_domainService.Send<Create>(new CreateCustImpl
+			_domainService.Send<RegisterNew>(new CreateCustImpl
 				{
 					AggregateId = aggregateId,
 					CustomerName = "Jörg Egretzberger",
