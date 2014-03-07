@@ -74,8 +74,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Windows.Shell">
-      <HintPath>..\packages\Microsoft.Windows.Shell.3.5.41019\lib\net35\Microsoft.Windows.Shell.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\libs\Microsoft.Windows.Shell.3.5.41019\lib\net35\Microsoft.Windows.Shell.dll</HintPath>
     </Reference>
     <Reference Include="NEventStore">
       <HintPath>..\packages\NEventStore.4.1.0.10\lib\net40\NEventStore.dll</HintPath>
@@ -89,7 +88,7 @@
       <HintPath>..\packages\RabbitMQ.Client.3.2.1\lib\net30\RabbitMQ.Client.dll</HintPath>
     </Reference>
     <Reference Include="RibbonControlsLibrary">
-      <HintPath>..\packages\RibbonControlsLibrary.4.0.0.11019\lib\net40\RibbonControlsLibrary.dll</HintPath>
+      <HintPath>..\libs\RibbonControlsLibrary.4.0.0.11019\lib\net40\RibbonControlsLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
