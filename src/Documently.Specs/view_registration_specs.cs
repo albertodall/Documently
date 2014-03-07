@@ -23,7 +23,7 @@ namespace Documently.Specs
 				Component.For<IDocumentStore>().Instance(new Mock<IDocumentStore>().Object),
 				Component.For<IWindsorContainer>().Instance(c),
 				Component.For<IBus>().ImplementedBy<InProcessBus>(),
-				AllTypes.FromAssembly(typeof(CustomerListView).Assembly)
+				Classes.FromAssembly(typeof(CustomerListView).Assembly)
 					.BasedOn(typeof(Consumes<>.All))
 					.WithService.FromInterface(typeof(Consumes<>.All)));
 

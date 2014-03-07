@@ -6,9 +6,10 @@ using CommonDomain.Core;
 using CommonDomain.Persistence;
 using CommonDomain.Persistence.EventStore;
 using Documently.Infrastructure.DomainInfrastructure;
-using EventStore;
-using EventStore.Dispatcher;
-using EventStore.Serialization;
+using NEventStore;
+using NEventStore.Dispatcher;
+using NEventStore.Serialization;
+using Newtonsoft.Json;
 
 namespace Documently.Infrastructure.Installers
 {

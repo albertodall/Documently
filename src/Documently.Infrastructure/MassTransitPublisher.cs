@@ -1,6 +1,6 @@
 using System;
-using EventStore;
-using EventStore.Dispatcher;
+using NEventStore;
+using NEventStore.Dispatcher;
 using MassTransit;
 using Magnum.Reflection;
 

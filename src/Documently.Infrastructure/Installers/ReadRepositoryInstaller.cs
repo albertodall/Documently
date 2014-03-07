@@ -11,11 +11,11 @@ namespace Documently.Infrastructure.Installers
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{
 			container.Register(
-				AllTypes.FromAssemblyContaining(typeof (IReadRepository))
+				Types.FromAssemblyContaining(typeof (IReadRepository))
 					.Where(x => x.GetInterface(typeof (IReadRepository).Name) != null)
 					.WithService.AllInterfaces());
 			container.Register(
-				AllTypes.FromAssemblyContaining<IReadRepository>()
+				Types.FromAssemblyContaining<IReadRepository>()
 					.BasedOn(typeof(Consumes<>.All)));
 		}
 	}

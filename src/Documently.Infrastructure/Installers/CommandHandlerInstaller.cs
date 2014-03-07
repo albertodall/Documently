@@ -14,7 +14,7 @@ namespace Documently.Infrastructure.Installers
 			container.AddFacility<TypedFactoryFacility>();
 
 			container.Register(
-				AllTypes.FromAssemblyContaining(typeof (CreateCustomerCommandHandler))
+				Classes.FromAssemblyContaining(typeof (CreateCustomerCommandHandler))
 				.Where(x => x.GetInterface(typeof (Consumes<>.All).Name) != null));
 		}
 	}

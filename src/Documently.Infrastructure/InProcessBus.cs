@@ -5,11 +5,11 @@ using Documently.Commands;
 using Documently.Domain.CommandHandlers;
 using Documently.Infrastructure.Misc;
 using Documently.Messages;
-using EventStore;
-using EventStore.Dispatcher;
 using MassTransit;
 using MassTransit.Diagnostics.Introspection;
 using MassTransit.Pipeline;
+using NEventStore;
+using NEventStore.Dispatcher;
 
 namespace Documently.Infrastructure
 {

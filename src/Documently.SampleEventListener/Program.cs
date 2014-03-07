@@ -12,7 +12,7 @@ namespace Documently.SampleEventListener
 			var bus = ServiceBusFactory.New(cfg =>
 				{
 					cfg.ReceiveFrom("rabbitmq://localhost/Documently.SampleEventListener");
-					cfg.UseRabbitMqRouting();
+					cfg.UseRabbitMq();
 					cfg.Subscribe(s =>
 						s.Handler<Created>(
 							created => Console.WriteLine("Customer Created: {0}".FormatWith(created)))

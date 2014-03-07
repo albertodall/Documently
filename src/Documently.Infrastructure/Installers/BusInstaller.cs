@@ -3,7 +3,7 @@ using Castle.Facilities.TypedFactory;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
-using EventStore.Dispatcher;
+using NEventStore.Dispatcher;
 using MassTransit;
 using MassTransit.NLogIntegration;
 

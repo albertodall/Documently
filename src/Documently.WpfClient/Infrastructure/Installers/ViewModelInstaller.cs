@@ -19,7 +19,7 @@ namespace Documently.WpfClient.Infrastructure.Installers
 					.ImplementedBy<EventAggregator>()
 					.LifeStyle.Singleton,
 				
-				AllTypes.FromThisAssembly().Pick());
+				Classes.FromThisAssembly().Pick());
 		}
 	}
 }
